@@ -28,6 +28,7 @@ chown -R root:www /var/www
 chmod 2775 /var/www
 find /var/www -type d -exec chmod 2775 {} +
 find /var/www -type f -exec chmod 0664 {} +
+cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
 
 echo '<?php phpinfo(); ?>' > /var/www/html/phpinfo.php
 service httpd start
