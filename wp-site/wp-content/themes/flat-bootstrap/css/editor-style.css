@@ -1,0 +1,28 @@
+/**
+ * Theme:	Flat Bootstrap
+ * File:	editor-style.css
+ * 
+ * The stylesheet for the WordPress visual post / page editor
+ *
+ * For now, simply loads our theme's fonts and stylesheets
+ *
+ * @package flat-bootstrap
+ */
+ 
+/**
+ * PULL IN OUR THEME STYLESHEETS SO VISUAL EDITOR AND PREVIEWS LOOK RIGHT
+ */
+@import url( '../bootstrap/css/bootstrap.min.css' );
+@import url( '//fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url( '//fonts.googleapis.com/css?family=Raleway:400,300,700');
+@import url( '../font-awesome/css/font-awesome.min.css');
+@import url( 'theme-base.css' );
+@import url( 'theme-flat.css' );
+@import url( '../style.css' );
+
+/*.gallery-settings select.columns {
+	color: red;
+	max-width: 75%;
+}*/
+
+

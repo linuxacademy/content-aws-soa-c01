@@ -1,0 +1,57 @@
+/*
+Theme Name: Flat Bootstrap Child
+Theme URI: http://xtremelysocial.com/wordpress/child/
+Description: Child theme for Flat Bootstrap. Includes a stylesheet (style.css) for you to restyle any of the CSS and a functions.php file to change theme parameters or components. Both files include samples of a few common things you might want to do.
+Author: XtremelySocial
+Author url: http://xtremelysocial.com
+Version: 1.5
+License: GNU General Public License
+License URI: http://www.opensource.org/licenses/GPL-3.0
+Template: flat-bootstrap
+Template Version: 1.9
+Tags: one-column, right-sidebar, left-sidebar, fluid-layout, responsive-layout, custom-header, custom-menu, featured-images, featured-image-header, full-width-template, flexible-header, theme-options, sticky-post, threaded-comments, light, translation-ready, rtl-language-support, custom-background
+*/
+
+/* 
+ * IMPORT the parent theme's stylesheet(s). NOTE: This was moved to functions.php for
+ * performance reasons.
+ */
+/*@import url("../flat-bootstrap/style.css");*/
+
+/* PUT YOUR CHANGED STYLES HERE 
+ * 
+ * The best way to do this is to copy in the relevant section from the parent's style.css
+ * file, change what you want, and remove the lines that you didn't change.
+ *
+ * NOTE: All these examples here are included just to show you how to do the most common
+ * things that users have requested, such as changing colors and the look of buttons, etc.
+*/
+
+/* Change the content (page) header to dark blue. */
+.content-header {
+	background-color: #2980b9;
+}
+
+/* Change the main link color to dark blue. Note that the hover color is set using a 
+ * neat trick with the opacity tag. This simply lightens whatever the link color is. That
+ * way we don't need to try to figure out a hover color that looks good. 
+ */
+a {
+	color: #2980b9;
+}
+a:hover,
+a:focus {
+	color: #2980b9;
+	opacity: .75;
+}
+
+/* Make the buttons square, if you'd like. */
+.btn {
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+}
+
+/* PUT ANY NEW STYLES TO USE IN YOUR CONTENT AREAS HERE SO YOU CAN EASILY PASTE THIS
+ * SECTION IF YOU CHANGE THEMES
+ */

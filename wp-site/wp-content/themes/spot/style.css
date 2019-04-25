@@ -1,0 +1,417 @@
+/*
+Theme Name: Spot
+Theme URI: http://xtremelysocial.com/wordpress/spot/
+Description: Spot by XtremelySocial is an adaptation of the "Spot" theme by Blacktie.co. It is a modern, fully responsive, "flat" style theme with a nice color palette, big full-width images, and full-width colored sections. The navbar is dark and fixed at the top of the page for easy navigation. It includes several beautiful header images for businesses, photographers, musicians, writers and you can upload your own as well. For more information go to http://xtremelysocial.com/wordpress/spot/.
+Author: XtremelySocial
+Author URI: http://xtremelysocial.com
+Version: 1.5
+License: GNU General Public License
+License URI: http://www.opensource.org/licenses/GPL-3.0
+Template: flat-bootstrap
+Template Version: 1.9
+Tags: one-column, right-sidebar, left-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, featured-images, featured-image-header, full-width-template, flexible-header, rtl-language-support, theme-options, translation-ready, sticky-post, threaded-comments, light, blue, black, red
+
+Spot WordPress theme, Copyright (C) 2014 XtremelySocial
+Spot WordPress theme is licensed under the GPL.
+See readme.txt file for license information on components used in this theme.
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Typography
+# Elements
+# Forms and Buttons
+# Navigation
+	## Links
+	## Menus
+# Content
+	## Header
+	## Footer
+	## Widget Areas
+	## Posts and pages
+	## Comments
+# Animation
+--------------------------------------------------------------*/
+
+/* 
+ * IMPORT the parent theme's stylesheet(s). NOTE: This is now done in functions.php
+ * instead of here for performance reasons
+ */
+/*@import url("../flat-bootstrap/style.css");*/
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+/* Adjust heading styles and font sizes */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #333;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 28px;
+	font-weight: 700
+}
+h2 {
+	font-size: 24px;
+	font-weight: 500;
+}
+h3 {
+	font-size: 20px;
+}
+h4,
+h5,
+h6 {
+	font-size: 16px;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+/* Allow users to force capital letters in content to match the hx tags */
+.caps {
+	text-transform: uppercase;
+}
+
+/* Allow users to override our forced-capital hx tags */
+.nocaps h1,
+.carousel h1 {
+	font-size: 41px;
+	text-transform: none;
+}
+.nocaps h2,
+.carousel h2 {
+	font-size: 34px;
+	text-transform: none;
+}
+
+/*--------------------------------------------------------------
+# Forms and Buttons
+--------------------------------------------------------------*/
+
+/* Set colors to red for input buttons (Search, Reply) */
+button,
+html input[type="button"],
+input[type="submit"] {
+    color: #fff;
+    background-color: #ec7063;
+    border-color: #ec7063;
+	font-weight: normal;
+}
+button:hover, 
+button:focus,
+html input[type="button"]:hover, 
+html input[type="button"]:focus,
+input[type="submit"]:hover, 
+input[type="submit"]:focus {
+    color: #fff;
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+/* Change pagination to use our red button color */
+.pagination>li>a, 
+.pagination>li>span,
+span.page-numbers.current {
+	color: #ec7063;
+}
+.pagination>li>a:hover, 
+.pagination>li>span:hover, 
+.pagination>li>a:focus,
+.pagination>li>span:focus,
+span.page-numbers.current {
+	color: #fff;
+    background-color: #ec7063;
+    border-color: #ec7063;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+/* Set link color to red and hover to gray */
+a {
+    color: #f85c37;
+}
+
+a:hover,
+a:focus {
+    color: #7b7b7b;
+}
+
+a:hover i,
+a:focus i {
+	color: #ff7878;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+/* 
+ * Need room for fixed navbar at the top. If you change the height of it, change it 
+ * here as well. Make sure the navbar doesn't wrap on tablets or this won't work 
+ * right.
+ */
+body {
+    padding-top: 50px;
+}
+
+/* When WordPress admin bar is displayed, move theme menu down below it. Note that the
+ * media query here uses the exact breakpoints in WordPress not the breakpoints in this
+ * theme. */
+.navbar-fixed-top { 
+	top: 0; 
+}
+body.admin-bar .navbar-fixed-top { 
+	top: 32px !important; 
+}
+body.admin-bar #wpadminbar {
+    position: fixed;
+	border-bottom: 1px solid #080808; /* match our topnav */
+}
+@media screen and (max-width:782px) {
+	body.admin-bar .navbar-fixed-top {
+		top: 46px !important; 
+	}
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+
+/* Custom site logo (when implemented) */
+.custom-logo {
+	max-height: 50px;
+	width: auto;
+}
+
+/* Tint the custom header images blue now that Flat Bootstrap includes the originals */
+/*.cover-image-overlay,
+.section-image-overlay {
+	background: rgba(52, 152, 219, 0.5);	
+}*/
+
+/* Adjust height of custom header image on home and other pages */
+.cover-image, 
+.cover-image-overlay,
+.section-image, 
+.section-image-overlay {
+	height: 480px; /* cross-browser */
+	min-height: 480px;
+}
+
+/* Change cover (front page) and section image crop to center. Bold the h1 tag. */
+.section-image, 
+.cover-image {
+	background-position: center center;
+}
+
+.cover-image-overlay h1,
+.cover-image-overlay h2,
+.section-image-overlay h1,
+.section-image-overlay h2 {
+	text-transform: none;
+	font-weight: 500;
+}
+
+/* Set spacer margin back to 100px as the header image as not as tall as in the parent theme */
+@media (min-width: 768px) {
+	.cover-image .spacer {
+		margin-top: 100px;
+	}
+}
+
+/* Style the fixed top nav */
+.navbar-inverse {
+	font-size: 14px;
+	font-weight: 700;
+	color: #999;
+	text-transform: uppercase;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #999999;
+}
+
+.navbar-inverse .navbar-brand {
+	font-size: 22px;
+	text-transform: uppercase;	
+}
+
+/* Just for fun, color dot red (only if site name has an "O" in it. see functions.php) */
+.navbar-inverse .navbar-brand i {
+	color: #ff7878;
+	letter-spacing: 1px;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+	background: #ff7878
+}
+
+/* Don't black out the active nav link on hover */
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:hover, 
+.navbar-inverse .navbar-nav>.active>a:focus {
+	background-color: #ff7878;
+}
+
+/*.navbar-inverse .navbar-nav > .active > a {
+	background: #ff7878
+}*/
+
+/* For larger screens, adjust some things */
+@media (min-width: 768px) {
+	body {
+    	padding-top: 80px;
+    }
+    .navbar-inverse {
+		padding-top: 15px;
+		padding-bottom: 15px;
+    }
+/*	.cover-image, .cover-image-overlay {
+		min-height: 480px !important;
+	}*/
+}
+
+/* Set initial image background so light text is readable before image loads */
+.content-header-image,
+.content-header {
+	background-color: #3498db;
+	color: #fff;
+}
+.content-header h1, 
+.content-header h2, 
+.content-header h3, 
+.content-header h4, 
+.content-header h5, 
+.content-header h6 {
+	color: #fff;
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+
+/* Format our Social Menu footer. Activated in Flat Bootstrap v2.0. */
+#social-menu {
+	background-color: #2f2f2f;
+	font-size: 36px;
+}
+#social-menu a {
+	color: #bdbdbd;
+}
+#social-menu a:hover,
+#social-menu a:active,
+#social-menu a:focus {
+	color: #ff7878;
+}
+
+/* Format the Jetpack Social Menu footer. Activated in Flat Bootstrap v2.0. */
+.jetpack-social-navigation li {
+	font-size: 36px !important;
+}
+
+/* Widgeted Footer - Almost Black Section Wrap */
+.sidebar-footer, 
+footer.sidebar-footer, 
+nav.sidebar-footer {
+	background-color: #2f2f2f;
+}
+
+.sidebar-footer a:hover:not(.btn), 
+.sidebar-footer a:focus:not(.btn),
+.footer-nav-menu a:hover:not(.btn),
+.footer-nav-menu a:focus:not(.btn) {
+    color: #f85c37;
+}
+
+.sidebar-footer span, 
+.sidebar-footer i {
+	color: #bdbdbd;
+}
+.sidebar-footer span:hover, 
+.sidebar-footer span:active, 
+.sidebar-footer i:hover,
+.sidebar-footer i:active {
+	color: #ff7878;
+}
+
+/*--------------------------------------------------------------
+## Widget Areas
+--------------------------------------------------------------*/
+
+/* Adjust text widget font sizes */
+aside.widget-text h2.widget-title {
+	font-size: 26px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase; 
+}
+	
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+/* Color "sticky" (featured) posts */
+.sticky .entry-title:after {
+	background-color: #ff7878;
+}
+
+/* Tone down the date | author | comments meta links on index pages */
+/*.entry-meta {
+	font-size: 14px;
+}*/
+
+
+/* Move up the edit link on single pages so it doesn't create an uncolored section */
+/*.page footer.entry-meta {
+	margin-bottom: 0px;
+	margin-top: -20px;
+}*/
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+/* Color commments "by post author" */
+.bypostauthor > article > footer > .comment-author:after {
+	background-color: #ff7878;
+}
+
+/*--------------------------------------------------------------
+## Animation
+--------------------------------------------------------------*/
+
+/* Tilt animation from our demo page (iphone images tilt on hover) */
+.tilt {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+ 
+.tilt:hover {
+  -webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+       -o-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}

@@ -1,0 +1,826 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Flat Bootstrap v1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-07-06 22:04+0100\n"
+"Last-Translator: Carlos <carlos@scopia.es>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"Language: es_ES\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ flat-bootstrap
+#: 404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "¡Vaya! No he podido encontrar esa página."
+
+# @ flat-bootstrap
+#: 404.php:17
+msgid "Or as techies would say, its a \"404 Error\""
+msgstr "O como los expertos dirían, esto es un \"error 404\""
+
+# @ flat-bootstrap
+#: 404.php:29
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Parece como si no se pudiese econtrar nada aquí. Quizás puedes probar alguno "
+"de los enlaces de abajo o hacer una búsqueda."
+
+# @ flat-bootstrap
+#: comments.php:30
+#, php-format
+msgctxt "comments title"
+msgid "One comment on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr[0] "Un comentario en  &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s comentarios en &ldquo;%2$s&rdquo;"
+
+# @ flat-bootstrap
+#: comments.php:37 comments.php:61
+msgid "Comment navigation"
+msgstr "Navegación por los comentarios"
+
+# @ flat-bootstrap
+#: comments.php:39 comments.php:63
+msgid "&larr; Newer Comments"
+msgstr "&larr; Comentarios recientes"
+
+# @ flat-bootstrap
+#: comments.php:40 comments.php:64
+msgid "Older Comments &rarr;"
+msgstr "Comentarios antiguos &rarr;"
+
+# @ flat-bootstrap
+#: comments.php:75
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+# @ flat-bootstrap
+#: content-header.php:84
+#, php-format
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+# @ flat-bootstrap
+#: content-header.php:92
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados de búsqueda para: %s"
+
+# @ flat-bootstrap
+#: content-header.php:95
+#, php-format
+msgid "Day: %s"
+msgstr "Día: %s"
+
+# @ flat-bootstrap
+#: content-header.php:98
+#, php-format
+msgid "Month: %s"
+msgstr "Mes: %s"
+
+# @ flat-bootstrap
+#: content-header.php:101
+#, php-format
+msgid "Year: %s"
+msgstr "Año: %s"
+
+# @ flat-bootstrap
+#: content-header.php:127
+msgid "Blog"
+msgstr "Blog"
+
+# @ flat-bootstrap
+#: content-index-nav.php:13
+msgid "paging-navigation"
+msgstr "Navegación por las páginas"
+
+# @ flat-bootstrap
+#: content-page-fullwidth.php:20 content-page.php:19
+#: content-post-footer.php:26 image.php:66 inc/template-tags.php:85
+#: page-fullpostsnoheader.php:40
+msgid "<span class=\"glyphicon glyphicon-edit\"></span> Edit"
+msgstr "<span class=\"glyphicon glyphicon-edit\"></span> Editar"
+
+# @ flat-bootstrap
+#: content-page-nav.php:16
+msgid "Next page &rarr;"
+msgstr "Página siguiente &rarr;"
+
+# @ flat-bootstrap
+#: content-page-nav.php:17
+msgid "&larr; Previous page"
+msgstr "&larr; Página previa"
+
+# @ flat-bootstrap
+#: content-post-header.php:35
+msgid "Leave a comment"
+msgstr "Deja un comentario"
+
+# @ flat-bootstrap
+#: content-post-header.php:35
+msgid "1 Comment</span>"
+msgstr "1 Comentario</span>"
+
+# @ flat-bootstrap
+#: content-post-header.php:35
+msgid "% Comments"
+msgstr "% Comentarios"
+
+# @ flat-bootstrap
+#: content-post-nav.php:13
+msgid "Post navigation"
+msgstr "Navegación por las entradas"
+
+# @ flat-bootstrap
+#: content-post-nav.php:16
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+# @ flat-bootstrap
+#: content-post-nav.php:17
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+# @ flat-bootstrap
+#: content-siteindex.php:16 sidebar-left.php:20 sidebar.php:20
+msgid "Site Content"
+msgstr "Contenido de la web"
+
+# @ flat-bootstrap
+#: content-siteindex.php:27 sidebar-left.php:27 sidebar.php:27
+msgid "Categories"
+msgstr "Categorías"
+
+# @ flat-bootstrap
+#: content.php:49
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Leer más <span class=\"meta-nav\">&rarr;</span>"
+
+# @ xtremelysocial
+#: flat-bootstrap-child/functions.php:69
+#, php-format
+msgid "&copy; %1$s %2$s"
+msgstr "&copy; %1$s %2$s"
+
+# @ flat-bootstrap
+#: footer.php:55
+#, php-format
+msgid "&copy; %1$s %2$s. Theme by %3$s."
+msgstr "&copy; %1$s %2$s. Tema por %3$s."
+
+# @ flat-bootstrap
+#: footer.php:72 functions.php:88
+msgid "Footer Menu"
+msgstr "Menú del pie de página"
+
+# @ flat-bootstrap
+#: functions.php:87
+msgid "Header Menu"
+msgstr "Menú de la cabecera"
+
+# @ flat-bootstrap
+#: functions.php:129
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+# @ flat-bootstrap
+#: functions.php:131
+msgid "Main sidebar (right or left)"
+msgstr "Barra lateral de la página principal (derecha o izquierda)"
+
+# @ flat-bootstrap
+#: functions.php:140
+msgid "Footer"
+msgstr "Pie de página"
+
+# @ flat-bootstrap
+#: functions.php:142
+msgid ""
+"Optional site footer widgets. Add 1-4 widgets here to display in columns."
+msgstr ""
+"Widgets opcionales para el pie de página. Añadir de 1 a 4 widgets aquí para "
+"mostrarlos en columnas"
+
+# @ flat-bootstrap
+#: functions.php:151
+msgid "Page Top"
+msgstr "Parte superior de la página"
+
+# @ flat-bootstrap
+#: functions.php:153
+msgid ""
+"Optional section after the header. This is a single column area that spans "
+"the full width of the page."
+msgstr ""
+"Sección opcional después de la cabecera. Éste es un área de una única "
+"columna que ocupa todo el ancho de la página."
+
+# @ flat-bootstrap
+#: functions.php:162
+msgid "Page Bottom"
+msgstr "Parte inferior de la página"
+
+# @ flat-bootstrap
+#: functions.php:164
+msgid ""
+"Optional section before the footer. This is a single column area that spans "
+"the full width of the page."
+msgstr ""
+"Sección opcional antes del pie de página. Consiste en un área de una única "
+"columna que ocupa todo el ancho de la página."
+
+# @ flat-bootstrap
+#: header.php:58
+msgid "Primary Menu"
+msgstr "Menú principal"
+
+# @ flat-bootstrap
+#: header.php:59
+msgid "Skip to content"
+msgstr "Ir al contenido"
+
+# @ flat-bootstrap
+#: image.php:25
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s &times; %5$s</a> in <a "
+"href=\"%6$s\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+"Publicado <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> el <a href=\"%3$s\">%4$s &times; %5$s</a> en <a "
+"href=\"%6$s\" rel=\"gallery\">%7$s</a>"
+
+# @ flat-bootstrap
+#: image.php:40
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr "<span class=\"meta-nav\">&larr;</span> Previo"
+
+# @ flat-bootstrap
+#: image.php:41
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Siguiente <span class=\"meta-nav\">&rarr;</span>"
+
+# @ tgmpa
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:161
+#: inc/xsbf-plugin-recommendations.php:120
+msgid "Install Required Plugins"
+msgstr "Instalar plugin requerido"
+
+# @ tgmpa
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:162
+#: inc/xsbf-plugin-recommendations.php:121
+msgid "Install Plugins"
+msgstr "Instalar plugins"
+
+# @ tgmpa
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:163
+#: inc/xsbf-plugin-recommendations.php:122
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Instalando plugin :%s"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:164
+msgid "Something went wrong."
+msgstr "Algo ha fallado."
+
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:165
+#: inc/xsbf-plugin-recommendations.php:124
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Este tema requiere el siguiente plugin: %1$s."
+msgstr[1] "Este tema requiere los siguientes plugins: %1$s."
+
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:166
+#: inc/xsbf-plugin-recommendations.php:125
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Este tema recomienda el siguiente plugin: %1$s."
+msgstr[1] "Este tema recomienda los siguientes plugins: %1$s."
+
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:167
+#: inc/xsbf-plugin-recommendations.php:126
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+"Perdón, pero no tienes los permisos correctos para instalar el plugin %s. "
+"Contacta con el administrador de la web para recibir asistencia o pedir la "
+"instalación del plugin.\t"
+msgstr[1] ""
+"Perdón, pero no tienes los permisos correctos para instalar los plugins %s. "
+"Contacta con el administrador de la web para recibir asistencia o pedir la "
+"instalación de los plugins."
+
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:168
+#: inc/xsbf-plugin-recommendations.php:127
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "El siguiente plugin requerido está desactivado actualmente: %1$s."
+msgstr[1] ""
+"Los siguientes plugins requeridos están desactivados actualmente: %1$s."
+
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:169
+#: inc/xsbf-plugin-recommendations.php:128
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "El siguiente plugin recomendado está desactivado: %1$s."
+msgstr[1] "Los siguientes plugins recomendados están desactivados: %1$s."
+
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:170
+#: inc/xsbf-plugin-recommendations.php:129
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+"Perdón, pero no tienes los permisos correctos para activar el plugin %s. "
+"Contacta con el administrado de la web para asistencia o para que te active "
+"el plugin."
+msgstr[1] ""
+"Perdón, pero no tienes los permisos correctos para activar los plugins %s. "
+"Contacta con el administrado de la web para asistencia o para que te active "
+"los plugins."
+
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:171
+#: inc/xsbf-plugin-recommendations.php:130
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+"El siguiente plugin necesita actualizarse a la última versión para asegurar "
+"la máxima compatibilidad con este tema. %1$s."
+msgstr[1] ""
+"Los siguientes plugins necesitan actualizarse a la última versión para "
+"asegurar la máxima compatibilidad con este tema. %1$s."
+
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:172
+#: inc/xsbf-plugin-recommendations.php:131
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+"Perdón, pero no tienes los permisos correctos para actualizar el plugin %s. "
+"Contacta con el administrador de la web para conseguir asistencia o para que "
+"actualice el plugin."
+msgstr[1] ""
+"Perdón, pero no tienes los permisos correctos para actualizar los plugins "
+"%s. Contacta con el administrador de la web para conseguir asistencia o para "
+"que actualice los plugins."
+
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:173
+#: inc/xsbf-plugin-recommendations.php:132
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Iniciando la instalación del plugin"
+msgstr[1] "Iniciando la instalación de los plugins"
+
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:174
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Iniciando la activación del plugin"
+msgstr[1] "Iniciando la activación de los plugins"
+
+# @ tgmpa
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:175
+#: inc/xsbf-plugin-recommendations.php:134
+msgid "Return to Required Plugins Installer"
+msgstr "Volver al instalador de plugins requeridos"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:176
+msgid "Return to the dashboard"
+msgstr "Volver al panel de control"
+
+# @ tgmpa
+# @ flat-bootstrap
+#: inc/class-tgm-plugin-activation.php:177
+#: inc/class-tgm-plugin-activation.php:1945
+#: inc/xsbf-plugin-recommendations.php:135
+msgid "Plugin activated successfully."
+msgstr "Plugin activado correctamente"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:179
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Todos los plugins instalados y activados correctamente. %1$s"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:180
+msgid "Dismiss this notice"
+msgstr "Descartar este aviso"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:534
+#: inc/class-tgm-plugin-activation.php:2162
+msgid "Return to the Dashboard"
+msgstr "Volver al panel de control"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1169
+msgid "Private Repository"
+msgstr "Repositorio privado"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1172
+msgid "Pre-Packaged"
+msgstr "Pre-empaquetado"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1177
+msgid "WordPress Repository"
+msgstr "Repositorio de Wordpress"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1180
+msgid "Required"
+msgstr "Requerido"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1180
+msgid "Recommended"
+msgstr "Recomendado"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1183
+msgid "Not Installed"
+msgstr "No instalado"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1185
+msgid "Installed But Not Activated"
+msgstr "Instalado pero no Activado"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1290
+#: inc/class-tgm-plugin-activation.php:1398
+msgid "Install"
+msgstr "Instalar"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1312
+#: inc/class-tgm-plugin-activation.php:1399
+msgid "Activate"
+msgstr "Activar"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1361
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+"No hay plugins para instalar o activar.  <a href=\"%1$s\" title=\"Volver al "
+"panel de control\">Volver al panel de control</a>"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1377
+msgid "Plugin"
+msgstr "Plugin"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1378
+msgid "Source"
+msgstr "Fuente"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1379
+msgid "Type"
+msgstr "Tipo"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1380
+msgid "Status"
+msgstr "Estado"
+
+# @ tgmpa
+#. gettext fix: identical singular and plural forms found, that may be ambiguous! Please check the code!
+#: inc/class-tgm-plugin-activation.php:1636
+#: inc/class-tgm-plugin-activation.php:178
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] "El siguiente plugin se ha activado correctamente:"
+msgstr[1] "Los siguientes plugins se han activado correctamente:"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1928
+msgid "Install package not available."
+msgstr "El paquete de instalación no está disponible"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1929
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+"Descargar el paquete de instalación desde <span class=\"code\">%s</"
+"span>&#8230;"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1930
+msgid "Unpacking the package&#8230;"
+msgstr "Descomprimiendo el paquete&#8230;"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1931
+msgid "Installing the plugin&#8230;"
+msgstr "Instalando el plugin&#8230;"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1932
+msgid "Plugin install failed."
+msgstr "La instalación del plugin ha fallado"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1933
+msgid "Plugin installed successfully."
+msgstr "El plugin se ha instalado correctamente"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:1944
+msgid "Plugin activation failed."
+msgstr "La activación del plugin ha fallado."
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:2058
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"El proceso de instalación y activación ha empezado. Este proceso puede "
+"tardar un poco en algunos servidores, por favor, sea paciente."
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:2059
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s instalado y activado correctamente."
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:2059
+#: inc/class-tgm-plugin-activation.php:2068
+msgid "Show Details"
+msgstr "Mostrar detalles"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:2059
+#: inc/class-tgm-plugin-activation.php:2068
+msgid "Hide Details"
+msgstr "Ocultar detalles"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:2060
+msgid "All installations and activations have been completed."
+msgstr "Todas las instalaciones y activaciones se han completado."
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:2061
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalando y activando plugin %1$s (%2$d/%3$d)"
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:2065
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"El proceso de instalación ha empezado. El proceso puede tardar un poco en "
+"algunos servidores, por favor, sea paciente."
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:2066
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+"Un error ha ocurrido durante la instalación de %1$s: <strong>%2$s</strong>."
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "La instalación de %1$s ha fallado."
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:2068
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s se ha instalado correctamente."
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:2069
+msgid "All installations have been completed."
+msgstr "Todas las instalaciones se han completado."
+
+# @ tgmpa
+#: inc/class-tgm-plugin-activation.php:2070
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalando plugin %1$s (%2$d/%3$d)"
+
+# @ flat-bootstrap
+#: inc/extras.php:97
+#, php-format
+msgid "Page %s"
+msgstr "Página %s"
+
+# @ flat-bootstrap
+#: inc/template-tags.php:84
+msgid "Pingback:"
+msgstr "Pingback:"
+
+# @ flat-bootstrap
+#: inc/template-tags.php:95
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">dice:</span>"
+
+# @ flat-bootstrap
+#: inc/template-tags.php:101
+#, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s a las %2$s"
+
+# @ flat-bootstrap
+#: inc/template-tags.php:104
+msgid "Edit"
+msgstr "Editar"
+
+# @ flat-bootstrap
+#: inc/template-tags.php:108
+msgid "Your comment is awaiting moderation."
+msgstr "Tu comentario está esperando a ser aprobado"
+
+# @ xs_bootstrap_flat
+#: inc/theme-functions.php:205
+msgid "Additional Post / Page Options"
+msgstr "Opciones adicionales de las entradas/páginas"
+
+# @ xsbf_textdomain
+#: inc/theme-functions.php:230
+msgid "Subtitle (displays under the title in the content header)"
+msgstr "Subtítulo (se muestra bajo el título en el contenido de la cabecera)"
+
+# @ xsbf_textdomain
+#: inc/theme-functions.php:243
+msgid "Display post full-width (no sidebar)?"
+msgstr ""
+"¿Mostrar la entrada con todo el ancho de la página (sin barra lateral)?"
+
+# @ flat-bootstrap
+#: inc/xsbf-plugin-recommendations.php:123
+msgid "Something went wrong with the plugin API."
+msgstr "Algo ha funcionado mal con el API del plugin."
+
+# @ flat-bootstrap
+#: inc/xsbf-plugin-recommendations.php:133
+msgid "Activate installed plugin"
+msgid_plural "Activate installed plugins"
+msgstr[0] "Activar plugin instalado"
+msgstr[1] "Activar plugins instalados"
+
+# @ flat-bootstrap
+#: inc/xsbf-plugin-recommendations.php:136
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr "Todos los plugins se han instalado y activado correctamente. %s"
+
+# @ flat-bootstrap
+#: no-results.php:15
+msgid "Nothing Found"
+msgstr "No se ha encontrado nada"
+
+# @ flat-bootstrap
+#: no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"¿Listo para publicar tu primera entrada? <a href=\"%1$s\">Empieza aquí</a>."
+
+# @ flat-bootstrap
+#: no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Perdón, pero no hay nada que coincida con tu búsqueda. Por favor, prueba de "
+"nuevo con palabras distintas."
+
+# @ flat-bootstrap
+#: no-results.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Parece que no podemos encontrar lo que estás buscando. Quizás la búsqueda "
+"ayude."
+
+# @ flat-bootstrap
+#: searchform.php:13
+msgctxt "label"
+msgid "Search for:"
+msgstr "Buscar:"
+
+# @ flat-bootstrap
+#: searchform.php:14
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Buscar &hellip;"
+
+# @ flat-bootstrap
+#: searchform.php:16
+msgctxt "submit button"
+msgid "Search"
+msgstr "Buscar"
+
+# @ flat-bootstrap
+#: sidebar-footer.php:43
+msgid "About This Theme"
+msgstr "Acerca de este tema"
+
+# @ flat-bootstrap
+#: sidebar-footer.php:44
+msgid ""
+"You are previewing this theme, so we are showing some sample widgets here. "
+"Once you activate the theme, you can place from 1 to 4 widgets here or don't "
+"add any to remove this whole footer. Cool, huh?"
+msgstr ""
+"Estás previsualizando este tema, por lo que te mostramos algunos widgets de "
+"ejemplo. Una vez actives el tema puedes colocar de 1 a 4 widgets aquí o no "
+"añadir ninguno para quitar todo el pie de la página. Está bien ¿no?"
+
+# @ flat-bootstrap
+#: sidebar-pagebottom.php:30
+msgid "THIS IS A CALL TO ACTION AREA"
+msgstr "ÉSTO ES UN ÁREA PARA PROVOCAR LA ACCIÓN"
+
+# @ flat-bootstrap
+#: sidebar-pagebottom.php:34
+msgid ""
+"This is just an example shown for the theme preview. You can add text "
+"widgets here to put whatever you'd like."
+msgstr ""
+"Esto es sólo una muestra de ejemplo para la previsualización del tema. "
+"Puedes añadir widgets de texto aquí para poner lo que quieras."
+
+# @ flat-bootstrap
+#: sidebar-pagebottom.php:35
+msgid "Call To Action Button"
+msgstr "Botón de llamada a la acción"

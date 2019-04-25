@@ -1,0 +1,84 @@
+/**
+ * Theme: Flat Bootstrap
+ * 
+ * The stylesheet for Right-to-Left languages
+ *
+ * Switches right margins to left margins and vice versa for RTL languages
+ *
+ * @package flat-bootstrap
+ */
+
+/* THIS IS ALL THE STYLES FROM THEME-BASE.CSS THAT USE LEFT / RIGHT TAGS */
+.screen-reader-text:focus {
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.6);
+}
+.screen-reader-text:focus {
+	right: 5px;
+}
+
+.alignleft, .align-left {
+	float: right;
+	margin-left: 10px;
+}
+.alignright, .align-right {
+	float: left;
+	margin-right: 10px;
+}
+.nocenter {
+	text-align: right;
+}
+
+.sticky .entry-title:after {
+	margin-right: 15px;
+}
+
+.avatar {
+	float: right;
+	margin-left: 10px;
+}
+
+#footer-navigation ul.dividers > li:nth-child(n+2):before {
+  margin-left: 10px;
+  border-right: 1px solid #dddddd;
+}
+
+.comment-list .children {
+	margin-right: 25px;
+}
+
+.cat-links, .tags-links {
+	margin-left: 10px;
+}
+
+.posted-on {
+	margin-left: 5px;
+}
+
+#secondary ul, footer#colophon.site-footer ul {
+	padding-right: 0;
+}
+#secondary ul ul, footer#colophon.site-footer ul ul {
+	padding-right: 25px;
+}
+
+.comment-list .children {
+	margin-right: 5%;
+}
+
+.widgets-list-layout-links {
+	float: right !important;
+	margin-right: 15px !important;
+}
+
+/* These are NOT used by the theme. They are provided for users to add
+ * padding to their page or post content. So it doesn't make sense to 
+ * switch these automatically.
+ */
+/*
+.padding-right {
+	padding-left: 35px;
+}
+.padding-left {
+	padding-right: 35px;
+}
+*/
