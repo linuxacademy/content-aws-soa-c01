@@ -1,1 +1,1 @@
-# content-aws-soa-c01
+# AWS Certified SysOps Administrator - Associate (SOA-C01)
