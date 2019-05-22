@@ -10,27 +10,18 @@ Metadata:
   License:
     Description: Copyright 2019 Linux Academy. All Rights Reserved.
 
-  AWS::CloudFormation::Interface:
-    ParameterGroups:
-    - Label:
-        default: AWS Parameters
-      Parameters:
-        - EC2KeyName
-        - LatestAmiId
-    ParameterLabels:
-      EC2KeyName:
-        default: Existing Key Pair
-      LatestAmiId:
-        default: Latest Amazon Linux 2 AMI ID
-
 Parameters:
   LatestAmiId:
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
     Description: Latest Amazon Linux 2 AMI ID
     Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
-  EC2KeyName:
-    Type: AWS::EC2::KeyPair::KeyName
-    Description: Name of an EC2 KeyPair. Your bastion instances will launch with this KeyPair.
+  KeyName:
+    Type: String
+    Description: Optional key pair of the ec2-user to establish a SSH connection to the EC2 instances
+    Default: ''
+
+Conditions:
+  HasKeyName: !Not [!Equals [!Ref KeyName, '']]
 
 Resources:
   VPC:
@@ -744,7 +735,7 @@ Resources:
     Properties:
       ImageId: !Ref LatestAmiId
       InstanceType: t3.micro
-      KeyName: !Ref EC2KeyName
+      KeyName: !If [HasKeyName, !Ref KeyName, !Ref 'AWS::NoValue']
       IamInstanceProfile: !Ref 'WebInstanceProfile'
       SecurityGroups:
         - !Ref 'WebServerSecurityGroup'
@@ -789,7 +780,7 @@ Resources:
     Properties:
       ImageId: !Ref LatestAmiId
       InstanceType: t3.micro
-      KeyName: !Ref EC2KeyName
+      KeyName: !If [HasKeyName, !Ref KeyName, !Ref 'AWS::NoValue']
       IamInstanceProfile: !Ref DatabaseInstanceProfile
       SubnetId: !Ref DBLayer1private
       SecurityGroupIds:
@@ -837,7 +828,7 @@ Resources:
     Properties:
       ImageId: !Ref LatestAmiId
       InstanceType: t3.micro
-      KeyName: !Ref EC2KeyName
+      KeyName: !If [HasKeyName, !Ref KeyName, !Ref 'AWS::NoValue']
       IamInstanceProfile: !Ref 'WebInstanceProfile'
       SecurityGroups:
         - !Ref 'BastionSecurityGroup'
