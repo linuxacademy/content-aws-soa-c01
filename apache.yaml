@@ -90,7 +90,7 @@ Resources:
       VpcId: !Ref VPC
       Tags:
         - Key: Name
-          Value: AppLayer2private  
+          Value: AppLayer2private
 
   PublicRT:
     Type: AWS::EC2::RouteTable
@@ -131,6 +131,9 @@ Resources:
     Properties:
       AllocationId: !GetAtt 'NATElasticIP.AllocationId'
       SubnetId: !Ref 'DMZ2public'
+      Tags:
+      - Key: Name
+        Value: !Sub '${AWS::StackName}-NATGateway'
 
   NATGatewayRoute:
     Type: AWS::EC2::Route
@@ -406,7 +409,7 @@ Resources:
       SecurityGroups:
         - !Ref 'LoadBalancerSecurityGroup'
       IpAddressType: ipv4
-  
+
   Listener:
     Type: AWS::ElasticLoadBalancingV2::Listener
     Properties:
@@ -416,7 +419,7 @@ Resources:
       LoadBalancerArn: !Ref 'LoadBalancer'
       Port: 80
       Protocol: HTTP
-  
+
   TargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
