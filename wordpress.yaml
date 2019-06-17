@@ -155,6 +155,9 @@ Resources:
     Properties:
       AllocationId: !GetAtt 'NATElasticIP.AllocationId'
       SubnetId: !Ref 'DMZ2public'
+      Tags:
+      - Key: Name
+        Value: !Sub '${AWS::StackName}-NATGateway'
 
   NATGatewayRoute:
     Type: AWS::EC2::Route
@@ -553,7 +556,7 @@ Resources:
       SecurityGroups:
         - !Ref 'LoadBalancerSecurityGroup'
       IpAddressType: ipv4
-  
+
   Listener:
     Type: AWS::ElasticLoadBalancingV2::Listener
     Properties:
@@ -563,7 +566,7 @@ Resources:
       LoadBalancerArn: !Ref 'LoadBalancer'
       Port: 80
       Protocol: HTTP
-  
+
   TargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
@@ -579,7 +582,7 @@ Resources:
       VpcId: !Ref VPC
       TargetGroupAttributes:
       - Key: stickiness.enabled
-        Value: 'true'
+        Value: 'false'
 
   WebInstanceProfile:
     Type: AWS::IAM::InstanceProfile
@@ -726,16 +729,55 @@ Resources:
           ToPort: 3306
           SourceSecurityGroupId: !Ref 'WebServerSecurityGroup'
 
+  EFSSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable NFS access from EC2
+      VpcId: !Ref VPC
+      Tags:
+        - Key: Name
+          Value: DatabaseSG
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 2049
+          ToPort: 2049
+          SourceSecurityGroupId: !Ref 'WebServerSecurityGroup'
+
+  EFSFileSystem:
+    Type: AWS::EFS::FileSystem
+    Properties:
+      PerformanceMode: generalPurpose
+
+  EFSMountTarget1:
+    Type: AWS::EFS::MountTarget
+    Properties:
+      FileSystemId: !Ref EFSFileSystem
+      SecurityGroups: [!Ref EFSSecurityGroup]
+      SubnetId: !Ref AppLayer1private
+
+  EFSMountTarget2:
+    Type: AWS::EFS::MountTarget
+    Properties:
+      FileSystemId: !Ref EFSFileSystem
+      SecurityGroups: [!Ref EFSSecurityGroup]
+      SubnetId: !Ref AppLayer2private
+
   LaunchConfiguration:
     Type: AWS::AutoScaling::LaunchConfiguration
     Metadata:
       AWS::CloudFormation::Init:
         configSets:
-          default:
-            - install_packages
+          default: [extras, install_packages]
+        extras:
+          commands:
+            install_mariadb:
+              command: 'amazon-linux-extras install lamp-mariadb10.2-php7.2 -y'
+            install_php:
+              command: 'amazon-linux-extras install php7.2 -y'
         install_packages:
           packages:
             yum:
+              amazon-efs-utils: []
               httpd: []
     Properties:
       ImageId: !Ref LatestAmiId
@@ -751,23 +793,25 @@ Resources:
           trap '/opt/aws/bin/cfn-signal -e 1 --region ${AWS::Region} --stack ${AWS::StackName} --resource AutoScalingGroup' ERR
           yum update -y
           /opt/aws/bin/cfn-init -v --region ${AWS::Region} --stack ${AWS::StackName} --resource LaunchConfiguration
-          amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
-          cd /var/www/html
-          curl -sL https://wordpress.org/latest.tar.gz | tar xfz -
-          mv wordpress/* ./
-          rm -rf wordpress
-          chown -R apache /var/www
-          chgrp -R apache /var/www
-          chmod 2775 /var/www
-          find /var/www -type d -exec sudo chmod 2775 {} \;
-          find /var/www -type f -exec sudo chmod 0664 {} \;
-          cp wp-config-sample.php wp-config.php
-          sed -i "s/database_name_here/wordpress"/g wp-config.php
-          sed -i "s/username_here/wpuser/g" wp-config.php
-          sed -i "s/password_here/Password1/g" wp-config.php
-          sed -i "s/localhost/${Database.PrivateIp}/g" wp-config.php
-          echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
-          systemctl start httpd
+          mount -t efs ${EFSFileSystem}:/ /var/www/html
+          if [[ ! -d /var/www/html/wordpress ]]; then
+            cd /var/www/html
+            curl -sL https://wordpress.org/latest.tar.gz | tar xfz -
+            mv wordpress/* ./
+            rm -rf wordpress
+            chown -R apache /var/www
+            chgrp -R apache /var/www
+            chmod 2775 /var/www
+            find /var/www -type d -exec sudo chmod 2775 {} \;
+            find /var/www -type f -exec sudo chmod 0664 {} \;
+            cp wp-config-sample.php wp-config.php
+            sed -i "s/database_name_here/wordpress"/g wp-config.php
+            sed -i "s/username_here/wpuser/g" wp-config.php
+            sed -i "s/password_here/Password1/g" wp-config.php
+            sed -i "s/localhost/${Database.PrivateIp}/g" wp-config.php
+            echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+          fi
+          service httpd start
           systemctl enable httpd
           /opt/aws/bin/cfn-signal -e 0 --region ${AWS::Region} --stack ${AWS::StackName} --resource AutoScalingGroup
       InstanceMonitoring: true
@@ -807,10 +851,13 @@ Resources:
           /opt/aws/bin/cfn-signal -e $? --region ${AWS::Region} --stack ${AWS::StackName} --resource Database
       Tags:
         - Key: Name
-          Value: database
+          Value: wordpress-database
 
   AutoScalingGroup:
     Type: AWS::AutoScaling::AutoScalingGroup
+    DependsOn:
+    - EFSMountTarget1
+    - EFSMountTarget2
     Properties:
       TargetGroupARNs:
         - !Ref 'TargetGroup'
